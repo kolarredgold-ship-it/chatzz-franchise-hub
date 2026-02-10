@@ -1,6 +1,4 @@
 import { Badge } from "@/components/ui/badge";
-import menuPage1 from "@/assets/menu-page-1.jpg";
-import menuPage2 from "@/assets/menu-page-2.jpg";
 
 const BEST_SELLERS = ["Masala Puri", "Sev Puri", "Spicy Dahi Boondi", "Sprouts Bhel"];
 
@@ -71,21 +69,6 @@ const MenuSection = () => (
         Our <span className="text-gradient">Menu</span>
       </h2>
       <p className="text-center text-muted-foreground mb-10">A feast of flavors waiting for your franchise!</p>
-
-      {/* Menu PDF Images */}
-      <div className="grid md:grid-cols-2 gap-6 mb-14">
-        <div className="rounded-2xl overflow-hidden shadow-xl border-2 border-primary/20 hover:border-primary/50 transition-all hover:shadow-2xl hover:scale-[1.01]">
-          <img src={menuPage1} alt="Bangarpet Chatzz Menu Page 1 - Pani Puri, Masala Items & Bhel" className="w-full h-auto" loading="lazy" />
-        </div>
-        <div className="rounded-2xl overflow-hidden shadow-xl border-2 border-primary/20 hover:border-primary/50 transition-all hover:shadow-2xl hover:scale-[1.01]">
-          <img src={menuPage2} alt="Bangarpet Chatzz Menu Page 2 - Bhel Varieties & Special Dishes" className="w-full h-auto" loading="lazy" />
-        </div>
-      </div>
-
-      {/* Detailed items grid */}
-      <h3 className="text-xl font-bold text-center mb-8" style={{ fontFamily: "'Poppins', sans-serif" }}>
-        Full Menu – {menuCategories.reduce((acc, c) => acc + c.items.length, 0)}+ Items
-      </h3>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {menuCategories.map((cat) => (
