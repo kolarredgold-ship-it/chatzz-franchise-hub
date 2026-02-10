@@ -1,10 +1,14 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import DemandSection from "@/components/DemandSection";
+import LocationStrategy from "@/components/LocationStrategy";
+import CompetitiveEdge from "@/components/CompetitiveEdge";
+import ConsumerInsights from "@/components/ConsumerInsights";
 import MenuSection from "@/components/MenuSection";
 import BusinessModels from "@/components/BusinessModels";
 import WhyChoose from "@/components/WhyChoose";
-import Expectations from "@/components/Expectations";
+import ROISection from "@/components/ROISection";
 import EnquirySection from "@/components/EnquirySection";
 import Footer from "@/components/Footer";
 
@@ -14,10 +18,14 @@ const Index = () => (
     <main>
       <HeroSection />
       <AboutSection />
+      <DemandSection />
+      <LocationStrategy />
+      <CompetitiveEdge />
+      <ConsumerInsights />
       <MenuSection />
       <BusinessModels />
       <WhyChoose />
-      <Expectations />
+      <ROISection />
       <EnquirySection />
     </main>
     <Footer />
