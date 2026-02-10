@@ -20,7 +20,7 @@ const EnquirySection = () => {
       return;
     }
 
-    const msg = `Hi, I'm interested in Bangarpet ChatzZ.%0A%0AName: ${name || "N/A"}%0AMobile: ${mobile}%0ACity: ${city || "N/A"}%0AInterested Model: ${model || "N/A"}`;
+    const msg = `Hi, I'm interested in Bangarpet Chatzz.%0A%0AName: ${name || "N/A"}%0AMobile: ${mobile}%0ACity: ${city || "N/A"}%0AInterested Model: ${model || "N/A"}`;
     window.open(`https://wa.me/919738959525?text=${msg}`, "_blank");
   };
 

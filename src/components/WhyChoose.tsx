@@ -13,7 +13,7 @@ const WhyChoose = () => (
   <section id="why-us" className="py-16 md:py-24 bg-card">
     <div className="container max-w-5xl mx-auto px-4">
       <h2 className="text-3xl md:text-4xl font-black text-center mb-12">
-        Why <span className="text-gradient">Bangarpet ChatzZ</span>?
+        Why <span className="text-gradient">Bangarpet Chatzz</span>?
       </h2>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

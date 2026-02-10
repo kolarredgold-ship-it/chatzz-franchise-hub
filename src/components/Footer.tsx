@@ -3,7 +3,7 @@ import { Phone, Globe, Instagram, Facebook } from "lucide-react";
 const Footer = () => (
   <footer className="bg-foreground text-background py-10">
     <div className="container max-w-4xl mx-auto px-4 text-center">
-      <h3 className="text-xl font-black mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Bangarpet ChatzZ</h3>
+      <h3 className="text-xl font-black mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Bangarpet Chatzz</h3>
       <div className="flex items-center justify-center gap-6 text-sm mb-6 flex-wrap">
         <a href="tel:9738959525" className="flex items-center gap-1.5 hover:text-secondary transition-colors">
           <Phone className="h-4 w-4" /> 9738959525
@@ -20,7 +20,7 @@ const Footer = () => (
           <Facebook className="h-4 w-4" />
         </a>
       </div>
-      <p className="text-xs text-background/60">© {new Date().getFullYear()} Bangarpet ChatzZ. All rights reserved.</p>
+      <p className="text-xs text-background/60">© {new Date().getFullYear()} Bangarpet Chatzz. All rights reserved.</p>
     </div>
   </footer>
 );
