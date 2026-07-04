@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import OutletShowcase from "@/components/OutletShowcase";
 import DemandSection from "@/components/DemandSection";
 import LocationStrategy from "@/components/LocationStrategy";
 import CompetitiveEdge from "@/components/CompetitiveEdge";
@@ -21,6 +22,7 @@ const Index = () => (
     <main>
       <HeroSection />
       <AboutSection />
+      <OutletShowcase />
       <DemandSection />
       <LocationStrategy />
       <CompetitiveEdge />
