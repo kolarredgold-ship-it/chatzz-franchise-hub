@@ -7,6 +7,9 @@ import CompetitiveEdge from "@/components/CompetitiveEdge";
 import ConsumerInsights from "@/components/ConsumerInsights";
 import MenuSection from "@/components/MenuSection";
 import BusinessModels from "@/components/BusinessModels";
+import FranchiseProcess from "@/components/FranchiseProcess";
+import PaymentPolicy from "@/components/PaymentPolicy";
+import SecretMasala from "@/components/SecretMasala";
 import WhyChoose from "@/components/WhyChoose";
 import ROISection from "@/components/ROISection";
 import EnquirySection from "@/components/EnquirySection";
@@ -24,6 +27,9 @@ const Index = () => (
       <ConsumerInsights />
       <MenuSection />
       <BusinessModels />
+      <FranchiseProcess />
+      <PaymentPolicy />
+      <SecretMasala />
       <WhyChoose />
       <ROISection />
       <EnquirySection />
