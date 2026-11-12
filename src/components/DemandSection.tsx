@@ -18,8 +18,8 @@ const DemandSection = () => (
   <section className="py-20 md:py-32 bg-card">
     <div className="container max-w-5xl mx-auto px-4">
       <div className="text-center mb-16">
-        <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Market Opportunity</span>
-        <h2 className="text-3xl md:text-5xl font-black mb-4">
+        <span className="eyebrow text-primary">Market Opportunity</span>
+        <h2 className="h-sec mb-4">
           Urban India: A <span className="text-gradient">High-Demand</span> Chaat Economy
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -33,7 +33,7 @@ const DemandSection = () => (
             <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-primary/10 flex items-center justify-center">
               <d.icon className="h-7 w-7 text-primary" />
             </div>
-            <h3 className="font-bold text-sm mb-1" style={{ fontFamily: "'Poppins', sans-serif" }}>{d.title}</h3>
+            <h3 className="h-card mb-1">{d.title}</h3>
             <p className="text-xs text-muted-foreground">{d.desc}</p>
           </div>
         ))}
@@ -42,7 +42,7 @@ const DemandSection = () => (
       <div className="bg-background rounded-2xl border border-primary/20 p-8 md:p-10">
         <div className="flex items-center gap-3 mb-6">
           <TrendingUp className="h-6 w-6 text-primary" />
-          <h3 className="text-lg font-bold" style={{ fontFamily: "'Poppins', sans-serif" }}>Why This Benefits BANGARPET CHATZz</h3>
+          <h3 className="h-card">Why This Benefits BANGARPET CHATZz</h3>
         </div>
         <div className="grid sm:grid-cols-2 gap-3">
           {benefits.map((b) => (

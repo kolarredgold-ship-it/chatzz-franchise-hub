@@ -6,8 +6,8 @@ const OutletShowcase = () => (
   <section className="py-20 md:py-32 bg-background">
     <div className="container max-w-6xl mx-auto px-4">
       <div className="text-center mb-14">
-        <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Live Outlet</span>
-        <h2 className="text-3xl md:text-5xl font-black mb-4">
+        <span className="eyebrow text-primary">Live Outlet</span>
+        <h2 className="h-sec mb-4">
           Real Stores. Real <span className="text-gradient">Footfall</span>.
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -28,7 +28,7 @@ const OutletShowcase = () => (
             <span className="inline-block px-3 py-1 mb-3 text-[10px] font-bold uppercase tracking-widest rounded-full bg-secondary text-secondary-foreground">
               Live in Bangalore
             </span>
-            <h3 className="text-2xl md:text-3xl font-black leading-tight mb-2" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            <h3 className="text-2xl md:text-3xl font-extrabold leading-tight mb-2">
               Peak Evening Rush
             </h3>
             <p className="text-sm text-background/80 max-w-md">

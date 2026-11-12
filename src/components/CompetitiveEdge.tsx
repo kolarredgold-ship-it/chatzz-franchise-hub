@@ -18,8 +18,8 @@ const CompetitiveEdge = () => (
   <section className="py-20 md:py-32 bg-card">
     <div className="container max-w-5xl mx-auto px-4">
       <div className="text-center mb-16">
-        <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Brand Positioning</span>
-        <h2 className="text-3xl md:text-5xl font-black mb-4">
+        <span className="eyebrow text-primary">Brand Positioning</span>
+        <h2 className="h-sec mb-4">
           Competitive <span className="text-gradient">Landscape</span>
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -29,7 +29,7 @@ const CompetitiveEdge = () => (
 
       <div className="grid md:grid-cols-2 gap-8">
         <div className="rounded-2xl border-2 border-border bg-background p-8">
-          <h3 className="text-lg font-bold mb-6 text-muted-foreground" style={{ fontFamily: "'Poppins', sans-serif" }}>
+          <h3 className="h-card mb-6 text-muted-foreground">
             Most Competitors
           </h3>
           <div className="space-y-4">
@@ -43,7 +43,7 @@ const CompetitiveEdge = () => (
         </div>
 
         <div className="rounded-2xl border-2 border-primary bg-gradient-to-b from-primary/5 to-background p-8 shadow-xl shadow-primary/10">
-          <h3 className="text-lg font-bold mb-6 text-gradient" style={{ fontFamily: "'Poppins', sans-serif" }}>
+          <h3 className="h-card mb-6 text-gradient">
             BANGARPET CHATZz
           </h3>
           <div className="space-y-4">

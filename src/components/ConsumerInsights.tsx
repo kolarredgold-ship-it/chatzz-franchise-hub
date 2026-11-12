@@ -11,8 +11,8 @@ const ConsumerInsights = () => (
   <section className="py-20 md:py-32 bg-background">
     <div className="container max-w-5xl mx-auto px-4">
       <div className="text-center mb-16">
-        <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Consumer Expectations</span>
-        <h2 className="text-3xl md:text-5xl font-black mb-4">
+        <span className="eyebrow text-primary">Consumer Expectations</span>
+        <h2 className="h-sec mb-4">
           What <span className="text-gradient">Customers</span> Want
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
@@ -26,7 +26,7 @@ const ConsumerInsights = () => (
             <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
               <v.icon className="h-7 w-7 text-primary" />
             </div>
-            <h3 className="font-bold mb-2" style={{ fontFamily: "'Poppins', sans-serif" }}>{v.title}</h3>
+            <h3 className="h-card mb-2">{v.title}</h3>
             <p className="text-xs text-muted-foreground">{v.desc}</p>
           </div>
         ))}

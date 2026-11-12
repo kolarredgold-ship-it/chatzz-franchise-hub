@@ -13,8 +13,8 @@ const WhyChoose = () => (
   <section id="why-us" className="py-20 md:py-32 bg-background">
     <div className="container max-w-5xl mx-auto px-4">
       <div className="text-center mb-16">
-        <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Advantages</span>
-        <h2 className="text-3xl md:text-5xl font-black mb-4">
+        <span className="eyebrow text-primary">Advantages</span>
+        <h2 className="h-sec mb-4">
           Why <span className="text-gradient">Bangarpet Chatzz</span>?
         </h2>
       </div>
@@ -26,7 +26,7 @@ const WhyChoose = () => (
               <p.icon className="h-6 w-6 text-primary" />
             </div>
             <div>
-              <h3 className="font-bold text-sm mb-1" style={{ fontFamily: "'Poppins', sans-serif" }}>{p.title}</h3>
+              <h3 className="h-card mb-1">{p.title}</h3>
               <p className="text-xs text-muted-foreground">{p.desc}</p>
             </div>
           </div>

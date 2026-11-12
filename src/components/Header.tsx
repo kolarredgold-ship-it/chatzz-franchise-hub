@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border shadow-sm">
       <div className="container flex items-center justify-between h-16">
-        <a href="#" className="text-2xl font-black text-gradient" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <a href="#" className="text-2xl font-extrabold text-gradient">
           Bangarpet Chatzz
         </a>
 

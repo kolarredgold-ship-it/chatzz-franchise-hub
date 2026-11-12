@@ -27,7 +27,7 @@ const EnquirySection = () => {
   return (
     <section id="enquiry" className="py-16 md:py-24 bg-gradient-to-b from-card to-background">
       <div className="container max-w-xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-black text-center mb-4">
+        <h2 className="h-sec text-center mb-4">
           Get <span className="text-gradient">Started</span>
         </h2>
         <p className="text-center text-muted-foreground mb-10">Fill in your details and we'll reach out!</p>

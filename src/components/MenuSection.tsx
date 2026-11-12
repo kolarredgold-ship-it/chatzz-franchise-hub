@@ -65,7 +65,7 @@ const menuCategories = [
 const MenuSection = () => (
   <section id="menu" className="py-16 md:py-24 bg-card">
     <div className="container max-w-6xl mx-auto px-4">
-      <h2 className="text-3xl md:text-4xl font-black text-center mb-4">
+      <h2 className="h-sec text-center mb-4">
         Our <span className="text-gradient">Menu</span>
       </h2>
       <p className="text-center text-muted-foreground mb-10">A feast of flavors waiting for your franchise!</p>
@@ -73,7 +73,7 @@ const MenuSection = () => (
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {menuCategories.map((cat) => (
           <div key={cat.name} className="rounded-xl border border-border bg-background p-5 shadow-sm hover:shadow-md transition-shadow">
-            <h4 className="text-base font-bold mb-3" style={{ fontFamily: "'Poppins', sans-serif" }}>{cat.name}</h4>
+            <h4 className="h-card mb-3">{cat.name}</h4>
             <ul className="space-y-2">
               {cat.items.map((item) => (
                 <li key={item.name} className="flex items-center justify-between text-sm">

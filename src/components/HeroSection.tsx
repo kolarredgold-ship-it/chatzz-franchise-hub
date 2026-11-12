@@ -27,13 +27,13 @@ const HeroSection = () => (
         🔥 Franchise Opportunity
       </span>
 
-      <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] mb-6 text-background drop-shadow-2xl">
+      <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[0.9] mb-6 text-background drop-shadow-2xl">
         Start Your<br />
         <span className="text-secondary">BANGARPET CHATZz</span><br />
         <span className="text-background/90 text-3xl md:text-5xl lg:text-5xl">Franchise</span>
       </h1>
 
-      <p className="text-lg md:text-xl text-background/80 mb-4 max-w-2xl mx-auto leading-relaxed font-medium" style={{ fontFamily: "'Poppins', sans-serif" }}>
+      <p className="text-lg md:text-xl text-background/80 mb-4 max-w-2xl mx-auto leading-relaxed font-medium">
         A Profitable Chaat & Pani Puri Business Model for Urban India.
       </p>
       <p className="text-sm md:text-base text-secondary font-bold mb-12 uppercase tracking-widest">
@@ -54,16 +54,16 @@ const HeroSection = () => (
       {/* Stat strip */}
       <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto p-4 md:p-6 rounded-2xl bg-background/10 backdrop-blur-md border border-background/20">
         <div className="text-center">
-          <div className="text-2xl md:text-3xl font-black text-secondary">₹49k</div>
-          <div className="text-[10px] md:text-xs uppercase tracking-wider text-background/70">Training Start</div>
+          <div className="text-2xl md:text-3xl font-extrabold text-secondary">₹49k</div>
+          <div className="text-xs uppercase tracking-wider text-background/70">Training Start</div>
         </div>
         <div className="text-center border-x border-background/20">
-          <div className="text-2xl md:text-3xl font-black text-secondary">35+</div>
-          <div className="text-[10px] md:text-xs uppercase tracking-wider text-background/70">Chaat Items</div>
+          <div className="text-2xl md:text-3xl font-extrabold text-secondary">35+</div>
+          <div className="text-xs uppercase tracking-wider text-background/70">Chaat Items</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl md:text-3xl font-black text-secondary">0%</div>
-          <div className="text-[10px] md:text-xs uppercase tracking-wider text-background/70">Royalty</div>
+          <div className="text-2xl md:text-3xl font-extrabold text-secondary">0%</div>
+          <div className="text-xs uppercase tracking-wider text-background/70">Royalty</div>
         </div>
       </div>
 

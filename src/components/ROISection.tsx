@@ -19,8 +19,8 @@ const ROISection = () => (
       <div className="grid md:grid-cols-2 gap-16">
         {/* ROI */}
         <div>
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Returns</span>
-          <h2 className="text-3xl md:text-4xl font-black leading-tight mb-8">
+          <span className="eyebrow text-primary">Returns</span>
+          <h2 className="h-sec leading-tight mb-8">
             Break-even & <span className="text-gradient">ROI</span>
           </h2>
           <div className="space-y-5">
@@ -31,7 +31,7 @@ const ROISection = () => (
                 </div>
                 <div>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-xl font-black text-gradient">{r.value}</span>
+                    <span className="text-xl font-extrabold text-gradient">{r.value}</span>
                   </div>
                   <p className="text-xs text-muted-foreground">{r.label} · {r.sub}</p>
                 </div>
@@ -42,8 +42,8 @@ const ROISection = () => (
 
         {/* Marketing */}
         <div>
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Growth Strategy</span>
-          <h2 className="text-3xl md:text-4xl font-black leading-tight mb-4">
+          <span className="eyebrow text-primary">Growth Strategy</span>
+          <h2 className="h-sec leading-tight mb-4">
             Marketing <span className="text-gradient">Strategy</span>
           </h2>
           <p className="text-muted-foreground mb-8">
@@ -55,7 +55,7 @@ const ROISection = () => (
                 <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
                   <m.icon className="h-5 w-5 text-accent" />
                 </div>
-                <span className="text-sm font-semibold" style={{ fontFamily: "'Poppins', sans-serif" }}>{m.label}</span>
+                <span className="text-sm font-semibold">{m.label}</span>
               </div>
             ))}
           </div>

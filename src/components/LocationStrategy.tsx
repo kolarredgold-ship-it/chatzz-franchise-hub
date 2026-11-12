@@ -20,8 +20,8 @@ const LocationStrategy = () => (
     <div className="container max-w-5xl mx-auto px-4">
       <div className="grid md:grid-cols-2 gap-12 items-start">
         <div>
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Location Economics</span>
-          <h2 className="text-3xl md:text-4xl font-black leading-tight mb-6">
+          <span className="eyebrow text-primary">Location Economics</span>
+          <h2 className="h-sec leading-tight mb-6">
             Micro-Market <span className="text-gradient">Strategy</span>
           </h2>
           <p className="text-muted-foreground mb-8">
@@ -44,7 +44,7 @@ const LocationStrategy = () => (
               <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                 <loc.icon className="h-5 w-5 text-primary" />
               </div>
-              <span className="font-semibold text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>{loc.label}</span>
+              <span className="font-semibold text-sm">{loc.label}</span>
             </div>
           ))}
         </div>

@@ -14,8 +14,8 @@ const FranchiseProcess = () => (
   <section className="py-20 md:py-32 bg-accent">
     <div className="container max-w-4xl mx-auto px-4">
       <div className="text-center mb-14">
-        <span className="text-xs font-bold uppercase tracking-[0.2em] text-secondary mb-4 block">How It Works</span>
-        <h2 className="text-3xl md:text-5xl font-black text-accent-foreground mb-4">
+        <span className="eyebrow text-secondary">How It Works</span>
+        <h2 className="h-sec text-accent-foreground mb-4">
           Franchise <span className="text-secondary">Process</span>
         </h2>
         <p className="text-accent-foreground/70 max-w-xl mx-auto">
@@ -28,7 +28,7 @@ const FranchiseProcess = () => (
           {steps.map((s, i) => (
             <li key={i} className="flex items-center gap-4 md:gap-6 group">
               <div className="shrink-0 relative">
-                <div className="w-11 h-11 md:w-12 md:h-12 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-black text-lg shadow-md">
+                <div className="w-11 h-11 md:w-12 md:h-12 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-extrabold text-lg shadow-md">
                   {i + 1}
                 </div>
               </div>
