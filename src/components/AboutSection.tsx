@@ -12,8 +12,8 @@ const AboutSection = () => (
     <div className="container max-w-5xl mx-auto px-4">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Why It Works</span>
-          <h2 className="text-3xl md:text-5xl font-black leading-tight mb-6">
+          <span className="eyebrow text-primary">Why It Works</span>
+          <h2 className="h-sec leading-tight mb-6">
             Why <span className="text-gradient">BANGARPET CHATZz</span> Works as a Franchise Brand
           </h2>
           <div className="w-16 h-1 bg-primary rounded-full mb-6" />
@@ -37,7 +37,7 @@ const AboutSection = () => (
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
               <h.icon className="h-6 w-6 text-primary" />
             </div>
-            <span className="text-sm font-bold text-center" style={{ fontFamily: "'Poppins', sans-serif" }}>{h.label}</span>
+            <span className="text-sm font-bold text-center">{h.label}</span>
           </div>
         ))}
       </div>

@@ -13,7 +13,7 @@ const SecretMasala = () => (
         <span className="inline-block px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-[0.2em] rounded-full bg-secondary text-secondary-foreground">
           Signature Offering
         </span>
-        <h2 className="text-3xl md:text-5xl font-black mb-4">
+        <h2 className="h-sec mb-4">
           🌶️ Secret <span className="text-secondary">Masala</span>
         </h2>
         <p className="text-background/60 max-w-xl mx-auto">
@@ -42,7 +42,7 @@ const SecretMasala = () => (
           <div className="relative">
             <div className="flex items-center gap-3 mb-4">
               <Lock className="h-6 w-6 text-primary-foreground" />
-              <h3 className="text-xl md:text-2xl font-black text-primary-foreground" style={{ fontFamily: "'Poppins', sans-serif" }}>
+              <h3 className="text-xl md:text-2xl font-extrabold text-primary-foreground">
                 What Makes It Special?
               </h3>
             </div>

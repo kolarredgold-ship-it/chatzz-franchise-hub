@@ -54,8 +54,8 @@ const BusinessModels = () => (
   <section id="models" className="py-20 md:py-32 bg-background">
     <div className="container max-w-6xl mx-auto px-4">
       <div className="text-center mb-14">
-        <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Pricing</span>
-        <h2 className="text-3xl md:text-5xl font-black mb-4">
+        <span className="eyebrow text-primary">Pricing</span>
+        <h2 className="h-sec mb-4">
           Choose The <span className="text-gradient">Business Model</span> That Fits You
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
@@ -75,7 +75,7 @@ const BusinessModels = () => (
           >
             {/* Model tag */}
             <div className="flex justify-center mb-6">
-              <span className="px-6 py-2 text-sm font-black uppercase tracking-wider bg-secondary text-secondary-foreground rounded-full shadow-md">
+              <span className="px-6 py-2 text-sm font-extrabold uppercase tracking-wider bg-secondary text-secondary-foreground rounded-full shadow-md">
                 {m.tag}
               </span>
             </div>
@@ -85,14 +85,14 @@ const BusinessModels = () => (
               <m.icon className="h-8 w-8 text-accent-foreground" />
             </div>
 
-            <h3 className="text-xl md:text-2xl font-black text-center mb-6 text-accent leading-tight" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            <h3 className="text-xl md:text-2xl font-extrabold text-center mb-6 text-accent leading-tight">
               {m.title}
             </h3>
 
             {/* Price */}
             <div className="text-center mb-8">
               <div className="inline-block px-8 py-3 bg-accent rounded-lg shadow-lg">
-                <span className="text-3xl md:text-4xl font-black text-accent-foreground">{m.price}</span>
+                <span className="h-sec text-accent-foreground">{m.price}</span>
               </div>
             </div>
 
@@ -112,7 +112,7 @@ const BusinessModels = () => (
                 <p className="text-xs font-bold uppercase tracking-wider text-foreground mb-1">
                   {m.renewal.label}
                 </p>
-                <p className="text-2xl font-black text-accent">{m.renewal.amount}</p>
+                <p className="text-2xl font-extrabold text-accent">{m.renewal.amount}</p>
               </div>
             )}
 
@@ -123,7 +123,7 @@ const BusinessModels = () => (
             {/* Note (Model 1) */}
             {m.note && (
               <div className="mb-6 p-5 rounded-xl bg-foreground text-background">
-                <p className="text-sm font-black uppercase tracking-wider mb-2 text-secondary">
+                <p className="text-sm font-extrabold uppercase tracking-wider mb-2 text-secondary">
                   {m.note.title}
                 </p>
                 <ul className="space-y-1.5">
@@ -150,11 +150,11 @@ const BusinessModels = () => (
           For Complete Details, Call or WhatsApp
         </p>
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-primary-foreground">
-          <a href="tel:7899666679" className="text-xl md:text-2xl font-black hover:underline">
+          <a href="tel:7899666679" className="text-xl md:text-2xl font-extrabold hover:underline">
             7899666679
           </a>
-          <span className="text-xl md:text-2xl font-black opacity-50">|</span>
-          <a href="tel:9738959525" className="text-xl md:text-2xl font-black hover:underline">
+          <span className="text-xl md:text-2xl font-extrabold opacity-50">|</span>
+          <a href="tel:9738959525" className="text-xl md:text-2xl font-extrabold hover:underline">
             9738959525
           </a>
         </div>

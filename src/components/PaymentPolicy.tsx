@@ -10,8 +10,8 @@ const PaymentPolicy = () => (
   <section className="py-20 md:py-32 bg-background">
     <div className="container max-w-5xl mx-auto px-4">
       <div className="text-center mb-12">
-        <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Policy</span>
-        <h2 className="text-3xl md:text-5xl font-black mb-4">
+        <span className="eyebrow text-primary">Policy</span>
+        <h2 className="h-sec mb-4">
           Payment <span className="text-gradient">Policy</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
@@ -26,7 +26,7 @@ const PaymentPolicy = () => (
               <div className="relative w-16 h-16 mb-4 rounded-2xl bg-primary/10 flex items-center justify-center">
                 <p.icon className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="font-black text-base md:text-lg mb-1" style={{ fontFamily: "'Poppins', sans-serif" }}>
+              <h3 className="font-extrabold text-base md:text-lg mb-1">
                 {p.title}
               </h3>
               <p className="text-xs md:text-sm text-muted-foreground">{p.desc}</p>
