@@ -12,4 +12,10 @@ describe("franchise research collection", () => {
     expect(url.searchParams.get("text")).toContain("Bangarpet Chatzz");
     expect(url.searchParams.get("text")).toContain("Amul: cost planning");
   });
+  it("lists every guide exactly once across the footer category groups", () => {
+    const listed = guidesByCategory.flatMap(group => group.guides.map(g => g.slug));
+    expect(listed).toHaveLength(100);
+    expect(new Set(listed).size).toBe(100);
+    expect(guidesByCategory.every(group => group.guides.length > 0)).toBe(true);
+  });
 });
