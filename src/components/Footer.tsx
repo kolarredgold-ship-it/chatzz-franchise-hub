@@ -1,9 +1,11 @@
 import { Phone, Globe, Instagram, Facebook } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => (
   <footer className="bg-foreground text-background py-10">
     <div className="container max-w-4xl mx-auto px-4 text-center">
       <h3 className="text-xl font-extrabold mb-4">Bangarpet Chatzz</h3>
+      <Link to="/franchise-guides" className="mb-5 inline-block text-sm underline hover:text-secondary">Franchise comparisons & investment guides</Link>
       <div className="flex items-center justify-center gap-6 text-sm mb-6 flex-wrap">
         <a href="tel:9738959525" className="flex items-center gap-1.5 hover:text-secondary transition-colors">
           <Phone className="h-4 w-4" /> 9738959525
