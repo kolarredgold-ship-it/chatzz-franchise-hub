@@ -20,3 +20,7 @@
 - Validate staff identity with getUser and a protected user_roles admin grant on every CRM request; the obscure admin URL is navigation, never authorization.
 - Do not auto-grant admin to new signups or first visitors; an owner must explicitly approve staff accounts.
 - Keep public enquiries account-free and WhatsApp-only; staff enter lead records in the private workspace, avoiding an anonymous writable CRM endpoint.
+
+## Franchise research
+- Keep published comparison guides in the local curated content collection with official sources for named competitor facts; this prevents unsupported pricing and availability claims.
+- Give public research routes their own metadata through Helmet, with canonical URLs owned by each route and a sitemap excluding private workspace routes; the static head remains the sitewide social fallback.

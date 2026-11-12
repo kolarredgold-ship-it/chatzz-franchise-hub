@@ -1,4 +1,5 @@
 # Tasks
+- [x] Create and verify 100 original franchise comparison and decision guides with directory, page metadata, sitemap and WhatsApp enquiries.
 - [x] Add secure direct admin workspace, Google Sheets lead storage, location reports, WhatsApp follow-ups, trainer assignments and training records.
 - [ ] Approve the owner's staff account and verify lead creation, follow-up history and trainer assignment end-to-end (blocked: no auth users; owner must sign in once).
 - [x] Add AI budget, city and business-goals advisor with WhatsApp handoff.

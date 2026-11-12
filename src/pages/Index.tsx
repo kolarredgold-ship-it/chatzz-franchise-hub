@@ -18,9 +18,11 @@ import WhyChoose from "@/components/WhyChoose";
 import ROISection from "@/components/ROISection";
 import EnquirySection from "@/components/EnquirySection";
 import Footer from "@/components/Footer";
+import { PageHead } from "@/components/PageHead";
 
 const Index = () => (
   <div className="min-h-screen">
+    <PageHead title="Bangarpet Chatzz – Franchise & Training" description="Explore Bangarpet Chatzz training, franchise branding, ₹5 lakh kiosk and ₹15 lakh café total investment options. Enquire on WhatsApp." path="/" />
     <Header />
     <main>
       <HeroSection />
