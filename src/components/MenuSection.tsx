@@ -80,7 +80,7 @@ const MenuSection = () => (
                   <span className="flex items-center gap-2">
                     {item.name}
                     {BEST_SELLERS.includes(item.name) && (
-                      <Badge className="text-[10px] px-1.5 py-0 bg-accent text-accent-foreground">⭐ Best Seller</Badge>
+                      <Badge className="text-xs px-1.5 py-0 bg-accent text-accent-foreground">⭐ Best Seller</Badge>
                     )}
                   </span>
                   <span className="font-semibold text-primary shrink-0 ml-2">{item.price}</span>

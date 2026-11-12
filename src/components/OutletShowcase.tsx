@@ -25,7 +25,7 @@ const OutletShowcase = () => (
           />
           <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/20 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-background">
-            <span className="inline-block px-3 py-1 mb-3 text-[10px] font-bold uppercase tracking-widest rounded-full bg-secondary text-secondary-foreground">
+            <span className="inline-block px-3 py-1 mb-3 text-xs font-bold uppercase tracking-widest rounded-full bg-secondary text-secondary-foreground">
               Live in Bangalore
             </span>
             <h3 className="text-2xl md:text-3xl font-extrabold leading-tight mb-2">
@@ -47,7 +47,7 @@ const OutletShowcase = () => (
             />
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-5 text-background">
-              <span className="inline-block px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full bg-primary text-primary-foreground">
+              <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full bg-primary text-primary-foreground">
                 Signature Branding
               </span>
             </div>
@@ -61,7 +61,7 @@ const OutletShowcase = () => (
             ].map((s) => (
               <div key={s.label} className="p-4 rounded-2xl bg-card border border-border text-center">
                 <s.icon className="h-5 w-5 mx-auto mb-2 text-primary" />
-                <div className="text-[11px] font-bold uppercase tracking-wide">{s.label}</div>
+                <div className="text-xs font-bold uppercase tracking-wide">{s.label}</div>
               </div>
             ))}
           </div>
