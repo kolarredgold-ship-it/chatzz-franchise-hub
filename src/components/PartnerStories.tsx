@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import arjun from "@/assets/sample-partner-arjun.jpg";
 import kavya from "@/assets/sample-partner-kavya.jpg";
 import ravi from "@/assets/sample-partner-ravi.jpg";
@@ -14,9 +15,14 @@ const PartnerStories = () => <section id="partner-stories" className="bg-card py
     <span className="eyebrow">Partner stories / samples</span>
     <h2 className="h-sec mb-4">Different goals. <span className="text-gradient">Shared ambition.</span></h2>
     <p className="mb-10 max-w-2xl text-sm text-muted-foreground">Illustrative examples only — fictional names, stories and outcomes with AI-generated portraits. These are not verified customer testimonials or promised results.</p>
-    <div className="grid gap-6 md:grid-cols-3">
-      {stories.map(story => <article key={story.name} className="overflow-hidden rounded-lg border border-border bg-background">
-        <img src={story.image} alt={`Illustrative AI-generated portrait for the fictional ${story.name} story`} loading="lazy" width={816} height={816} className="aspect-square w-full object-cover" />
+    <Carousel opts={{ align: "start", loop: true }} aria-label="Sample partner stories">
+      <div className="mb-5 flex justify-end gap-3">
+        <CarouselPrevious title="Previous story" className="static h-11 w-11 translate-x-0 translate-y-0" />
+        <CarouselNext title="Next story" className="static h-11 w-11 translate-x-0 translate-y-0" />
+      </div>
+      <CarouselContent className="-ml-6">
+      {stories.map(story => <CarouselItem key={story.name} className="basis-[90%] pl-6 md:basis-1/2" aria-label={`${story.name}, ${story.city}`}><article className="h-full overflow-hidden rounded-lg border border-border bg-background">
+        <img src={story.image} alt={`Illustrative AI-generated portrait for the fictional ${story.name} story`} loading="lazy" width={816} height={816} className="aspect-[4/3] w-full object-cover object-top" />
         <div className="space-y-4 p-6">
           <p className="text-xs font-semibold uppercase text-primary">Fictional example</p>
           <div><h3 className="text-xl font-extrabold">{story.name} · {story.city}</h3><p className="text-sm text-muted-foreground">{story.model}</p></div>
@@ -24,8 +30,9 @@ const PartnerStories = () => <section id="partner-stories" className="bg-card py
           <blockquote className="text-sm leading-relaxed">“{story.quote}”</blockquote>
           <p className="border-t border-border pt-4 text-sm font-medium">{story.result}</p>
         </div>
-      </article>)}
-    </div>
+      </article></CarouselItem>)}
+      </CarouselContent>
+    </Carousel>
   </div>
 </section>;
 export default PartnerStories;

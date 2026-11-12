@@ -12,3 +12,4 @@
 
 ## Partner stories
 - Label sample testimonials, portraits and outcomes as fictional at section and item level until verified partner material replaces them, to avoid presenting examples as customer evidence.
+- Use the shared Embla carousel for sliding story content with swipe and accessible manual navigation, avoiding automatic motion.
