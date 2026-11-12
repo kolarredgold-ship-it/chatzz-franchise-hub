@@ -134,9 +134,9 @@ const Footer = () => (
               </li>
             ))}
           </ul>
-          <Link to="/#presence" className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-secondary hover:underline underline-offset-4">
+          <a href="/#presence" className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-secondary hover:underline underline-offset-4">
             See outlet locations <ArrowRight className="h-4 w-4" />
-          </Link>
+          </a>
         </div>
       </div>
 
