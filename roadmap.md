@@ -1,6 +1,7 @@
 # Tasks
-- [ ] Add AI budget, city and business-goals advisor with WhatsApp handoff.
-- [ ] Add interactive city presence map and 200+ trained highlight; confirm genuine outlet cities.
-- [ ] Verify advisor flow and mobile layout; review map integration without live Maps testing.
-- [ ] Expand menu with milkshakes, burgers, pizzas and sandwiches; state location-dependent prices.
-- [ ] Add genuine partner testimonials with photos and results (awaiting partner material).
+- [x] Add AI budget, city and business-goals advisor with WhatsApp handoff.
+- [x] Add Karnataka city presence and 200+ trained highlight using confirmed city data.
+- [ ] Add interactive city map (blocked: Google Maps connection declined).
+- [x] Verify advisor flow and mobile layout.
+- [x] Expand menu with milkshakes, burgers, pizzas and sandwiches; state location-dependent prices; exact varieties need company confirmation.
+- [x] Add clearly labelled fictional sample partner stories, portraits and outcomes as requested.
