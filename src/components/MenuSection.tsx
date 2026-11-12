@@ -60,6 +60,10 @@ const menuCategories = [
       { name: "Masala Cool Drink", price: "₹30" },
     ],
   },
+  { name: "🥛 Milkshakes", items: [{ name: "Milkshake varieties", price: "Enquire" }] },
+  { name: "🍔 Burgers", items: [{ name: "Burger varieties", price: "Enquire" }] },
+  { name: "🍕 Pizzas", items: [{ name: "Pizza varieties", price: "Enquire" }] },
+  { name: "🥪 Sandwiches", items: [{ name: "Sandwich varieties", price: "Enquire" }] },
 ];
 
 const MenuSection = () => (
@@ -76,8 +80,8 @@ const MenuSection = () => (
             <h4 className="h-card mb-3">{cat.name}</h4>
             <ul className="space-y-2">
               {cat.items.map((item) => (
-                <li key={item.name} className="flex items-center justify-between text-sm">
-                  <span className="flex items-center gap-2">
+                <li key={item.name} className="flex items-start justify-between gap-2 text-sm">
+                  <span className="flex min-w-0 flex-wrap items-center gap-2">
                     {item.name}
                     {BEST_SELLERS.includes(item.name) && (
                       <Badge className="text-xs px-1.5 py-0 bg-accent text-accent-foreground">⭐ Best Seller</Badge>
@@ -91,8 +95,8 @@ const MenuSection = () => (
         ))}
       </div>
 
-      <p className="text-xs text-muted-foreground text-center mt-10 max-w-2xl mx-auto italic">
-        * Prices mentioned in the menu are indicative only. Final selling prices can be customized by the franchise owner depending on area, city, rent, and local market conditions.
+      <p className="text-sm text-muted-foreground text-center mt-10 max-w-2xl mx-auto">
+        Prices may vary by location. Menu prices are indicative only; final selling prices depend on area, city, rent and local market conditions. Ask our team for milkshake, burger, pizza and sandwich varieties available at your location.
       </p>
     </div>
   </section>

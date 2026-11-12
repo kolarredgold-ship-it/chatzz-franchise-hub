@@ -7,7 +7,8 @@ const navLinks = [
   { label: "Market", href: "#market" },
   { label: "Menu", href: "#menu" },
   { label: "Models", href: "#models" },
-  { label: "Why Us", href: "#why-us" },
+  { label: "Advisor", href: "#advisor" },
+  { label: "Outlets", href: "#presence" },
   { label: "Enquiry", href: "#enquiry" },
 ];
 
@@ -21,7 +22,7 @@ const Header = () => {
           Bangarpet Chatzz
         </a>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-4">
           {navLinks.map((l) => (
             <a key={l.href} href={l.href} className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
               {l.label}
@@ -32,13 +33,13 @@ const Header = () => {
           </Button>
         </nav>
 
-        <button className="md:hidden p-2" onClick={() => setOpen(!open)} aria-label="Toggle menu">
+        <Button variant="ghost" size="icon" className="lg:hidden shrink-0" onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open}>
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        </Button>
       </div>
 
       {open && (
-        <nav className="md:hidden border-t border-border bg-background pb-4">
+        <nav className="lg:hidden border-t border-border bg-background pb-4">
           {navLinks.map((l) => (
             <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block px-6 py-3 text-sm font-medium hover:bg-muted transition-colors">
               {l.label}
