@@ -1,4 +1,4 @@
-import { ChevronDown, Globe, Instagram, Facebook, MapPin, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, Check, ChevronDown, Globe, Instagram, Facebook, MapPin, MessageCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { franchiseGuides, guidesByCategory } from "@/lib/franchise-guides";
@@ -8,11 +8,18 @@ const WHATSAPP = "https://wa.me/919738959525?text=" + encodeURIComponent("Hi Ban
 const exploreLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/#about" },
-  { label: "Market demand", href: "/#market" },
   { label: "Menu", href: "/#menu" },
+  { label: "Business models", href: "/#models" },
   { label: "Budget advisor", href: "/#advisor" },
   { label: "Outlet locations", href: "/#presence" },
   { label: "Enquiry", href: "/#enquiry" },
+];
+
+const factPoints = [
+  "200+ people trained so far",
+  "Karnataka presence — Bengaluru & Kolar",
+  "No EMI, no security deposit",
+  "No royalty or monthly fees",
 ];
 
 const programLinks = [
@@ -90,7 +97,7 @@ const Footer = () => (
           </div>
         </div>
 
-        <nav className="lg:col-span-3" aria-label="Site sections">
+        <nav className="lg:col-span-2" aria-label="Site sections">
           <ColumnLabel>Explore</ColumnLabel>
           <ul className="space-y-2.5 text-sm">
             {exploreLinks.map(l => (
@@ -103,19 +110,34 @@ const Footer = () => (
           </ul>
         </nav>
 
-        <nav className="lg:col-span-5" aria-label="Programs and outlet formats">
+        <nav className="lg:col-span-3" aria-label="Programs and outlet formats">
           <ColumnLabel>Programs</ColumnLabel>
           <ul className="space-y-3 text-sm">
             {programLinks.map(p => (
               <li key={p.label}>
                 <a href={p.href} className="group block">
                   <span className="font-semibold text-background/90 group-hover:text-secondary transition-colors">{p.label}</span>
-                  <span className="block text-xs text-background/60">{p.note}</span>
+                  <span className="block text-xs text-background/70">{p.note}</span>
                 </a>
               </li>
             ))}
           </ul>
         </nav>
+
+        <div className="lg:col-span-3">
+          <ColumnLabel>Why Bangarpet Chatzz</ColumnLabel>
+          <ul className="space-y-2.5 text-sm">
+            {factPoints.map(f => (
+              <li key={f} className="flex items-start gap-2.5 text-background/80">
+                <Check className="mt-0.5 h-4 w-4 shrink-0 text-secondary" />
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+          <Link to="/#presence" className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-secondary hover:underline underline-offset-4">
+            See outlet locations <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
       </div>
 
       <section className="mt-14 rounded-xl border border-background/10 bg-background/5 p-6 md:p-8" aria-labelledby="footer-guides-heading">
@@ -126,29 +148,31 @@ const Footer = () => (
               Every comparison, investment and location guide we publish — {franchiseGuides.length} in total.
             </p>
           </div>
-          <Link to="/franchise-guides" className="shrink-0 text-sm font-bold text-secondary hover:underline underline-offset-4">
-            View all guides
-          </Link>
+          <Button asChild variant="outline" size="sm" className="shrink-0 rounded-full border-background/25 bg-background/10 text-background hover:bg-background/20 hover:text-background">
+            <Link to="/franchise-guides">
+              View all guides <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
 
         <div className="mt-6">
           {guidesByCategory.map(group => (
             <details key={group.category} className="group border-t border-background/10 py-4 first:border-t-0 first:pt-0">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-bold [&::-webkit-details-marker]:hidden">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-bold transition-colors hover:text-secondary [&::-webkit-details-marker]:hidden">
                 <span className="flex items-center gap-3">
                   {group.category}
                   <span className="rounded-full bg-background/10 px-2 py-0.5 text-xs font-medium text-background/70">
                     {group.guides.length}
                   </span>
                 </span>
-                <ChevronDown className="h-4 w-4 shrink-0 text-background/60 transition-transform group-open:rotate-180" />
+                <ChevronDown className="h-5 w-5 shrink-0 text-background/70 transition-transform group-open:rotate-180" />
               </summary>
               <ul className="mt-4 grid gap-x-8 gap-y-3 text-sm sm:grid-cols-2 xl:grid-cols-3">
                 {group.guides.map(guide => (
                   <li key={guide.slug}>
                     <Link
                       to={`/franchise-guides/${guide.slug}`}
-                      className="inline-block text-background/75 hover:text-secondary hover:underline underline-offset-4 transition-colors"
+                      className="inline-block leading-relaxed text-background/80 hover:text-secondary hover:underline underline-offset-4 transition-colors"
                     >
                       {guide.title}
                     </Link>
@@ -160,7 +184,7 @@ const Footer = () => (
         </div>
       </section>
 
-      <div className="mt-10 flex flex-col gap-2 border-t border-background/10 pt-6 text-xs text-background/60 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mt-10 flex flex-col gap-2 border-t border-background/10 pt-6 text-xs text-background/70 sm:flex-row sm:items-center sm:justify-between">
         <p>© {new Date().getFullYear()} Bangarpet Chatzz. All rights reserved.</p>
         <p>Prices, menu availability and terms vary by location. No guaranteed earnings.</p>
       </div>
