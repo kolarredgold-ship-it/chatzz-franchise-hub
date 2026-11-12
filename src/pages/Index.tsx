@@ -8,6 +8,8 @@ import CompetitiveEdge from "@/components/CompetitiveEdge";
 import ConsumerInsights from "@/components/ConsumerInsights";
 import MenuSection from "@/components/MenuSection";
 import BusinessModels from "@/components/BusinessModels";
+import FranchiseAdvisor from "@/components/FranchiseAdvisor";
+import BrandPresence from "@/components/BrandPresence";
 import FranchiseProcess from "@/components/FranchiseProcess";
 import PaymentPolicy from "@/components/PaymentPolicy";
 import SecretMasala from "@/components/SecretMasala";
@@ -23,12 +25,14 @@ const Index = () => (
       <HeroSection />
       <AboutSection />
       <OutletShowcase />
+      <BrandPresence />
       <DemandSection />
       <LocationStrategy />
       <CompetitiveEdge />
       <ConsumerInsights />
       <MenuSection />
       <BusinessModels />
+      <FranchiseAdvisor />
       <FranchiseProcess />
       <PaymentPolicy />
       <SecretMasala />
