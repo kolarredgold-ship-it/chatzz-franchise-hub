@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { franchiseGuides, guideEnquiry } from "./franchise-guides";
+import { franchiseGuides, guideEnquiry, guidesByCategory } from "./franchise-guides";
 
 describe("franchise research collection", () => {
   it("provides exactly 100 individually addressable guides", () => {
