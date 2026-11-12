@@ -52,6 +52,8 @@ const EnquirySection = () => {
               <SelectContent>
                 <SelectItem value="Training (₹50,000)">Chaat Making Training (₹50,000)</SelectItem>
                 <SelectItem value="Brand & Business (₹1,50,000)">Brand & Business Model (₹1,50,000)</SelectItem>
+                <SelectItem value="Kiosk Model (₹5,00,000 total investment)">Kiosk Model (₹5,00,000)</SelectItem>
+                <SelectItem value="Café Model (₹15,00,000 total investment)">Café Model (₹15,00,000)</SelectItem>
               </SelectContent>
             </Select>
           </div>

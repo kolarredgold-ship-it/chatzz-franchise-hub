@@ -6,3 +6,7 @@ Deno.test("franchise annual renewal matches ₹39,999", () => equal(terms.franch
 Deno.test("training has no annual renewal", () => equal(terms.training.renewal, 0));
 Deno.test("below training fee is not ready", () => equal(checkBudget("training", 49998), "not_ready"));
 Deno.test("brand recommendation cannot exceed budget", () => equal(checkBudget("franchise", 149998), "not_ready"));
+Deno.test("kiosk total investment is ₹5 lakh", () => equal(terms.kiosk.fee, 500000));
+Deno.test("cafe total investment is ₹15 lakh", () => equal(terms.cafe.fee, 1500000));
+Deno.test("kiosk recommendation requires full investment budget", () => equal(checkBudget("kiosk", 499999), "not_ready"));
+Deno.test("cafe recommendation requires full investment budget", () => equal(checkBudget("cafe", 1499999), "not_ready"));

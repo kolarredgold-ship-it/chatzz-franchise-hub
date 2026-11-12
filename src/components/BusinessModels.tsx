@@ -1,5 +1,6 @@
-import { Check, GraduationCap, Store } from "lucide-react";
+import { Check, GraduationCap, Store, Coffee, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { outletModels, outletEnquiry } from "@/lib/outlet-models";
 
 const WHATSAPP_URL = "https://wa.me/919738959525?text=Hi%2C%20I%27m%20interested%20in%20the%20Bangarpet%20Chatzz%20franchise.%20Please%20share%20details.";
 
@@ -145,6 +146,23 @@ const BusinessModels = () => (
       </div>
 
       {/* Contact banner */}
+      <div id="outlet-models" className="scroll-mt-20 mt-20">
+        <span className="eyebrow">Outlet formats</span>
+        <h2 className="h-sec mb-4">Kiosk or <span className="text-gradient">Café</span></h2>
+        <p className="max-w-2xl mb-8 text-muted-foreground">Total investment options for your Bangarpet Chatzz outlet. Suggested specifications below are indicative and subject to location and final approval.</p>
+        <div className="grid gap-6 md:grid-cols-2">
+          {outletModels.map(m => <article key={m.id} className="flex min-w-0 flex-col rounded-lg border border-border bg-card p-6 md:p-8">
+            <div className="mb-5 flex items-center gap-3 text-primary">{m.id === "kiosk" ? <Store className="h-7 w-7" /> : <Coffee className="h-7 w-7" />}<h3 className="text-2xl font-extrabold">{m.title}</h3></div>
+            <p className="text-3xl font-extrabold text-accent">₹{m.investment.toLocaleString("en-IN")}</p>
+            <p className="mt-1 text-sm font-medium text-muted-foreground">Total investment</p>
+            <p className="my-5 text-sm">{m.description}</p>
+            <h4 className="h-card mb-3">Indicative specifications</h4>
+            <dl className="mb-6 flex-1 divide-y divide-border">{m.specifications.map(spec => <div key={spec.label} className="py-3"><dt className="text-xs font-semibold uppercase text-muted-foreground">{spec.label}</dt><dd className="mt-1 text-sm">{spec.value}</dd></div>)}</dl>
+            <Button asChild size="lg" className="w-full"><a href={outletEnquiry(m.title, m.investment)} target="_blank" rel="noopener noreferrer"><MessageCircle className="mr-2 h-4 w-4" /> Enquire about {m.id === "kiosk" ? "kiosk" : "café"}</a></Button>
+          </article>)}
+        </div>
+        <p className="mt-6 text-sm text-muted-foreground">The amounts above are total investments, not setup-only costs. Space, staffing, menu and equipment are suggested planning specifications, not guaranteed package inclusions. Confirm the itemised scope, premises costs, working capital and recurring brand terms with our team before payment. These are outlet formats, distinct from the training and brand-association program fees above.</p>
+      </div>
       <div className="mt-12 p-6 md:p-8 rounded-2xl bg-gradient-to-r from-accent to-primary text-center">
         <p className="text-sm font-bold uppercase tracking-wider text-primary-foreground/90 mb-2">
           For Complete Details, Call or WhatsApp

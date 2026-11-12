@@ -21,7 +21,7 @@ Deno.serve(async (req) => {
       text: { format: { type: "json_schema", name: "franchise_recommendation", strict: true, schema: {
         type: "object", additionalProperties: false,
         properties: {
-          option: { type: "string", enum: ["training", "franchise", "not_ready"] },
+          option: { type: "string", enum: ["training", "franchise", "kiosk", "cafe", "not_ready"] },
           summary: { type: "string" }, reasons: { type: "array", items: { type: "string" } }, nextSteps: { type: "array", items: { type: "string" } },
         }, required: ["option", "summary", "reasons", "nextSteps"],
       } } },

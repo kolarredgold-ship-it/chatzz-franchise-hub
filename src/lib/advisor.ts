@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const advisorResponseSchema = z.object({
-  option: z.enum(["training", "franchise", "not_ready"]),
+  option: z.enum(["training", "franchise", "kiosk", "cafe", "not_ready"]),
   summary: z.string(), reasons: z.array(z.string()), nextSteps: z.array(z.string()),
   terms: z.object({ title: z.string(), fee: z.number(), renewal: z.number() }).nullable(),
 });
