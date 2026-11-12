@@ -9,6 +9,7 @@
 - Run recommendation prompts and AI Gateway SDK calls only in the public franchise-advisor Edge Function; validate input and output, store no leads, and hand enquiries to WhatsApp to preserve the account-free prospect flow.
 - Keep advisor fee and budget checks in the function's rules module with tests; recommendations must not imply program fees cover outlet setup costs.
 - Keep confirmed city presence in a data module; do not fabricate individual outlet pins without supplied addresses.
+- Store outlet-format investments and indicative specifications in the outlet-models module with concrete price tests; distinguish total outlet investment from training and brand program fees.
 
 ## Partner stories
 - Label sample testimonials, portraits and outcomes as fictional at section and item level until verified partner material replaces them, to avoid presenting examples as customer evidence.
