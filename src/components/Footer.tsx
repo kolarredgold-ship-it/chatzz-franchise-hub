@@ -43,7 +43,7 @@ const Footer = () => (
               <MessageCircle className="mr-2 h-5 w-5" /> WhatsApp us
             </a>
           </Button>
-          <Button asChild size="lg" variant="outline" className="rounded-full border-background/25 bg-transparent text-background hover:bg-background/10 hover:text-background">
+          <Button asChild size="lg" variant="outline" className="rounded-full border-background/25 bg-background/10 text-background hover:bg-background/20 hover:text-background">
             <a href="tel:9738959525">
               <Phone className="mr-2 h-5 w-5" /> 9738959525
             </a>
@@ -54,7 +54,7 @@ const Footer = () => (
 
     <div className="container max-w-6xl mx-auto px-4 py-14">
       <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12">
-        <div className="lg:col-span-5">
+        <div className="lg:col-span-4">
           <Link to="/" className="text-2xl font-extrabold text-gradient">Bangarpet Chatzz</Link>
           <p className="mt-4 max-w-sm text-sm text-background/70">
             Chaat-led food businesses across Karnataka — mostly Bengaluru, with three outlets in
@@ -103,7 +103,7 @@ const Footer = () => (
           </ul>
         </nav>
 
-        <nav className="lg:col-span-4" aria-label="Programs and outlet formats">
+        <nav className="lg:col-span-5" aria-label="Programs and outlet formats">
           <ColumnLabel>Programs</ColumnLabel>
           <ul className="space-y-3 text-sm">
             {programLinks.map(p => (
@@ -143,7 +143,7 @@ const Footer = () => (
                 </span>
                 <ChevronDown className="h-4 w-4 shrink-0 text-background/60 transition-transform group-open:rotate-180" />
               </summary>
-              <ul className="mt-4 grid gap-x-8 gap-y-2.5 text-sm sm:grid-cols-2 xl:grid-cols-3">
+              <ul className="mt-4 grid gap-x-8 gap-y-3 text-sm sm:grid-cols-2 xl:grid-cols-3">
                 {group.guides.map(guide => (
                   <li key={guide.slug}>
                     <Link
