@@ -30,7 +30,7 @@ export async function crmRequest(body: unknown): Promise<unknown> {
   }
   return data;
 }
-export async function loadCrm(): Promise<CrmData> { return dataSchema.parse(await crmRequest({ action: 'list' })); }
+export async function loadCrm(): Promise<CrmData> { return dataSchema.parse(await crmRequest({ action: 'list' })) as CrmData; }
 export const blankLead = (): Lead => ({ id: '', name: '', phone: '', city: '', area: '', model: 'Training', budget: '', status: 'New', nextFollowUp: '', trainerId: '', trainingStart: '', trainingEnd: '', trainingStatus: 'Not scheduled', trainingNotes: '', createdAt: '' });
 export function localToday(now = new Date()) { return `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`; }
 export function dueFollowUp(lead: Lead, today = localToday()) { return Boolean(lead.nextFollowUp && lead.nextFollowUp <= today && !['Converted', 'Lost'].includes(lead.status)); }
