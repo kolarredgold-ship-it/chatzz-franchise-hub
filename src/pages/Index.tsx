@@ -10,6 +10,7 @@ import MenuSection from "@/components/MenuSection";
 import BusinessModels from "@/components/BusinessModels";
 import FranchiseAdvisor from "@/components/FranchiseAdvisor";
 import BrandPresence from "@/components/BrandPresence";
+import PartnerStories from "@/components/PartnerStories";
 import FranchiseProcess from "@/components/FranchiseProcess";
 import PaymentPolicy from "@/components/PaymentPolicy";
 import SecretMasala from "@/components/SecretMasala";
@@ -38,6 +39,7 @@ const Index = () => (
       <SecretMasala />
       <WhyChoose />
       <ROISection />
+      <PartnerStories />
       <EnquirySection />
     </main>
     <Footer />
