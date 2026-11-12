@@ -8,3 +8,5 @@
 - [x] Verify advisor flow and mobile layout.
 - [x] Expand menu with milkshakes, burgers, pizzas and sandwiches; state location-dependent prices; exact varieties need company confirmation.
 - [x] Add clearly labelled fictional sample partner stories, portraits and outcomes as requested.
+- [x] Link all 100 guide pages in the footer.
+- [x] Redesign the footer with a professional, structured layout.
