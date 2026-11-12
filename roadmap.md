@@ -1,4 +1,6 @@
 # Tasks
+- [x] Add secure direct admin workspace, Google Sheets lead storage, location reports, WhatsApp follow-ups, trainer assignments and training records.
+- [ ] Approve the owner's staff account and verify lead creation, follow-up history and trainer assignment end-to-end (blocked: no auth users; owner must sign in once).
 - [x] Add AI budget, city and business-goals advisor with WhatsApp handoff.
 - [x] Add Karnataka city presence and 200+ trained highlight using confirmed city data.
 - [ ] Add interactive city map (blocked: Google Maps connection declined).
