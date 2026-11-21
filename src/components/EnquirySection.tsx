@@ -1,46 +1,77 @@
 import { useState } from "react";
-import { MessageCircle, ArrowUpRight, Check } from "lucide-react";
+import { Phone, MessageCircle, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { enquiryMessage, whatsapp } from "@/lib/homepage";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useToast } from "@/hooks/use-toast";
 
 const EnquirySection = () => {
   const [name, setName] = useState("");
+  const [mobile, setMobile] = useState("");
   const [city, setCity] = useState("");
-  const [model, setModel] = useState("Not sure");
-  const [timeline, setTimeline] = useState("within 3 months");
+  const [model, setModel] = useState("");
+  const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name.trim() || !city.trim()) return;
-    window.open(whatsapp(enquiryMessage(name, city, model, timeline)), "_blank", "noopener,noreferrer");
+    if (!mobile.trim()) {
+      toast({ title: "Mobile number is required", variant: "destructive" });
+      return;
+    }
+
+    const msg = `Hi, I'm interested in Bangarpet Chatzz.%0A%0AName: ${name || "N/A"}%0AMobile: ${mobile}%0ACity: ${city || "N/A"}%0AInterested Model: ${model || "N/A"}`;
+    window.open(`https://wa.me/919738959525?text=${msg}`, "_blank");
   };
 
   return (
-    <section id="enquiry" className="home-section reveal bg-muted/50">
-      <div className="home-container grid gap-10 md:grid-cols-2 md:gap-16">
-        <div className="md:pt-5"><span className="eyebrow">Let's take the first step</span><h2 className="h-sec text-secondary">Every new beginning<br />starts with a conversation.</h2><p className="mt-5 max-w-md text-muted-foreground">Tell us a little about your plans. Our team will help you understand the options, costs and next steps — at your pace.</p><ul className="mt-8 space-y-4 text-secondary">{['No pressure. Just an honest conversation.', 'A model that fits your plans.', 'Your details stay in your WhatsApp message.'].map(text => <li key={text} className="flex gap-3"><Check className="h-5 w-5 shrink-0 text-primary" />{text}</li>)}</ul></div>
-        <form onSubmit={handleSubmit} className="grid gap-5 rounded-2xl border border-border bg-card p-6 md:p-8 soft-shadow">
-          <h3 className="text-xl font-extrabold text-secondary">Tell us about your dream</h3>
+    <section id="enquiry" className="py-16 md:py-24 bg-gradient-to-b from-card to-background">
+      <div className="container max-w-xl mx-auto px-4">
+        <h2 className="h-sec text-center mb-4">
+          Get <span className="text-gradient">Started</span>
+        </h2>
+        <p className="text-center text-muted-foreground mb-10">Fill in your details and we'll reach out!</p>
+
+        <form onSubmit={handleSubmit} className="space-y-5 bg-background rounded-2xl border border-border p-6 md:p-8 shadow-lg">
           <div>
             <Label htmlFor="name">Name</Label>
-            <Input id="name" className="mt-2 h-12 text-base" autoComplete="name" placeholder="Your full name" required maxLength={100} value={name} onChange={(e) => setName(e.target.value)} />
+            <Input id="name" placeholder="Your full name" value={name} onChange={(e) => setName(e.target.value)} />
+          </div>
+          <div>
+            <Label htmlFor="mobile">Mobile Number *</Label>
+            <Input id="mobile" type="tel" placeholder="10-digit mobile number" required value={mobile} onChange={(e) => setMobile(e.target.value)} />
           </div>
           <div>
             <Label htmlFor="city">City / Area</Label>
-            <Input id="city" className="mt-2 h-12 text-base" autoComplete="address-level2" placeholder="Your city or area" required maxLength={100} value={city} onChange={(e) => setCity(e.target.value)} />
+            <Input id="city" placeholder="Your city or area" value={city} onChange={(e) => setCity(e.target.value)} />
           </div>
           <div>
-            <Label htmlFor="interest">Interested model</Label>
-            <select id="interest" value={model} onChange={e => setModel(e.target.value)} className="mt-2 h-12 w-full rounded-md border border-input bg-background px-3 text-base focus:ring-2 focus:ring-ring">{['Not sure', 'Kiosk', 'Café', 'Training'].map(value => <option key={value}>{value}</option>)}</select>
+            <Label>Interested Model</Label>
+            <Select value={model} onValueChange={setModel}>
+              <SelectTrigger><SelectValue placeholder="Select a model" /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value="Training (₹50,000)">Chaat Making Training (₹50,000)</SelectItem>
+                <SelectItem value="Brand & Business (₹1,50,000)">Brand & Business Model (₹1,50,000)</SelectItem>
+                <SelectItem value="Kiosk Model (₹5,00,000 total investment)">Kiosk Model (₹5,00,000)</SelectItem>
+                <SelectItem value="Café Model (₹15,00,000 total investment)">Café Model (₹15,00,000)</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
-          <div><Label htmlFor="timeline">When would you like to start?</Label><select id="timeline" value={timeline} onChange={e => setTimeline(e.target.value)} className="mt-2 h-12 w-full rounded-md border border-input bg-background px-3 text-base focus:ring-2 focus:ring-ring">{['as soon as possible', 'within 3 months', 'within 6 months', 'after exploring my options'].map(value => <option key={value} value={value}>{value.charAt(0).toUpperCase() + value.slice(1)}</option>)}</select></div>
-          <Button type="submit" size="lg" className="w-full h-auto min-h-12 rounded-full whitespace-normal py-3 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90">
-            <MessageCircle /> Let's talk on WhatsApp <ArrowUpRight />
+          <Button type="submit" size="lg" className="w-full text-base shadow-lg shadow-primary/30">
+            <Send className="mr-2 h-5 w-5" /> Submit via WhatsApp
           </Button>
-          <p className="text-xs text-center text-muted-foreground">No account. No stored form details. Just a conversation.</p>
         </form>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+          <Button asChild variant="outline" size="lg">
+            <a href="tel:9738959525"><Phone className="mr-2 h-5 w-5" /> Call Now</a>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="border-green-600 text-green-700 hover:bg-green-50">
+            <a href="https://wa.me/919738959525?text=Hi%2C%20I%27m%20interested%20in%20Bangarpet%20ChatzZ%20franchise." target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="mr-2 h-5 w-5" /> WhatsApp Chat
+            </a>
+          </Button>
+        </div>
       </div>
     </section>
   );

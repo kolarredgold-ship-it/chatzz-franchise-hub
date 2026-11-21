@@ -12,12 +12,8 @@
 - Store outlet-format investments and indicative specifications in the outlet-models module with concrete price tests; distinguish total outlet investment from training and brand program fees.
 
 ## Partner stories
-- Show unfilled story placeholders rather than invented people, quotes or results until consenting partner material is supplied.
-- Use native scroll-snap or shared Embla carousels with accessible manual navigation and no autoplay.
-
-## Public homepage
-- Keep the homepage independent of Cloud requests and staff authentication; enquiries only create encoded WhatsApp links and never persist prospect data.
-- Keep homepage interaction helpers in a tested local module and presentation in focused homepage sections; preserve existing private staff and research routes.
+- Label sample testimonials, portraits and outcomes as fictional at section and item level until verified partner material replaces them, to avoid presenting examples as customer evidence.
+- Use the shared Embla carousel for sliding story content with swipe and accessible manual navigation, avoiding automatic motion.
 
 ## Franchise CRM
 - Store CRM leads, trainers and activities only in the connected Google Sheet; route access through the franchise-crm Edge Function to keep connector credentials server-only.

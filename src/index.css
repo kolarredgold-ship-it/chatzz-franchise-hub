@@ -4,28 +4,23 @@
 
 @layer base {
   :root {
-    --background: 45 55% 97%;
-    --foreground: 150 8% 16%;
+    --background: 30 50% 97%;
+    --foreground: 15 30% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 150 8% 16%;
+    --card: 30 40% 95%;
+    --card-foreground: 15 30% 12%;
 
     --popover: 30 50% 97%;
     --popover-foreground: 15 30% 12%;
 
-    --primary: 24 92% 44%;
+    --primary: 18 90% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 153 43% 18%;
-    --secondary-foreground: 45 55% 97%;
-    --hero-highlight: 35 100% 67%;
-    --whatsapp: 149 65% 29%;
-    --whatsapp-foreground: 0 0% 100%;
-    --hero-overlay: linear-gradient(90deg, hsl(153 43% 13% / .94) 0%, hsl(153 43% 13% / .78) 35%, hsl(153 43% 13% / .1) 70%);
-    --shadow-soft: 0 8px 28px hsl(153 43% 18% / .06);
+    --secondary: 45 100% 55%;
+    --secondary-foreground: 15 30% 12%;
 
-    --muted: 44 30% 92%;
-    --muted-foreground: 150 5% 40%;
+    --muted: 30 30% 90%;
+    --muted-foreground: 15 10% 45%;
 
     --accent: 0 75% 48%;
     --accent-foreground: 0 0% 100%;
@@ -33,8 +28,8 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 44 22% 86%;
-    --input: 44 22% 86%;
+    --border: 30 25% 85%;
+    --input: 30 25% 85%;
     --ring: 18 90% 50%;
 
     --radius: 0.75rem;
@@ -60,9 +55,6 @@
     --primary-foreground: 0 0% 100%;
     --secondary: 45 100% 55%;
     --secondary-foreground: 15 30% 12%;
-    --hero-highlight: 35 100% 67%;
-    --whatsapp: 149 65% 29%;
-    --whatsapp-foreground: 0 0% 100%;
     --muted: 15 15% 20%;
     --muted-foreground: 30 15% 60%;
     --accent: 0 75% 48%;
@@ -106,7 +98,7 @@
   h6 {
     font-family: inherit;
     font-weight: 800;
-    letter-spacing: 0;
+    letter-spacing: -0.02em;
     line-height: 1.2;
   }
 }
@@ -115,72 +107,16 @@
 @layer components {
   /* Small uppercase label that sits above a section title */
   .eyebrow {
-    @apply block mb-3 text-xs font-bold uppercase text-primary;
+    @apply block mb-4 text-xs font-bold uppercase tracking-[0.2em] text-primary;
   }
   /* Section title */
   .h-sec {
-    @apply text-3xl md:text-4xl font-extrabold leading-tight;
+    @apply text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.15];
   }
   /* Card / panel title */
   .h-card {
-    @apply text-base font-extrabold;
+    @apply text-base font-bold tracking-tight;
   }
-}
-
-/* Public homepage: compact, touch-first layouts and restrained motion. */
-.home-container { width: 100%; max-width: 1200px; margin-inline: auto; padding-inline: 1rem; }
-.home-page { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
-.home-page section[id] { scroll-margin-top: 96px; }
-.home-section { padding-block: 64px; }
-.home-hero { min-height: 620px; }
-.hero-shade { background: var(--hero-overlay); }
-.home-scroll { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; padding-bottom: 12px; }
-.home-scroll::-webkit-scrollbar { display: none; }
-.home-scroll > * { scroll-snap-align: start; flex-shrink: 0; }
-.hope-card { width: 85%; }
-.menu-card { width: 72%; }
-.story-card { width: 85%; }
-.soft-shadow { box-shadow: var(--shadow-soft); }
-.reveal { opacity: 1; }
-.motion-ready .reveal:not(.is-visible) { opacity: 0; transform: translateY(16px); }
-.motion-ready .reveal { transition: opacity 500ms ease, transform 500ms ease; }
-.is-visible .stagger-item { animation: fade-up 500ms ease both; }
-.is-visible .stagger-item:nth-child(2) { animation-delay: 80ms; }
-.is-visible .stagger-item:nth-child(3) { animation-delay: 160ms; }
-.is-visible .stagger-item:nth-child(4) { animation-delay: 240ms; }
-.hero-stat { animation: fade-up 500ms ease both; }
-.hero-stat:nth-child(2) { animation-delay: 100ms; }
-.hero-stat:nth-child(3) { animation-delay: 200ms; }
-.hero-cta { animation: button-breathe 3s ease-in-out 2; }
-.journey-line { position: absolute; top: 22px; bottom: 22px; left: 22px; width: 2px; background: hsl(var(--border)); }
-.journey-line::after { content: ''; display: block; width: 100%; height: 100%; background: hsl(var(--primary)); transform: scaleY(0); transform-origin: top; transition: transform 600ms ease; }
-.is-visible .journey-line::after { transform: scaleY(1); }
-@keyframes fade-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes button-breathe { 50% { box-shadow: 0 0 0 6px hsl(var(--primary) / .12); } }
-@media (min-width: 768px) {
- .home-container { padding-inline: 1.5rem; }
- .home-section { padding-block: 88px; }
- .home-page { padding-bottom: 0; }
- .hope-row { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); }
- .hope-card { width: auto; }
- .menu-card { width: calc((100% - 3rem) / 4); }
- .story-card { width: calc((100% - 2rem) / 3); }
- .journey-line { top: 22px; left: 22px; right: 22px; bottom: auto; width: auto; height: 2px; }
- .journey-line::after { transform: scaleX(0); transform-origin: left; }
- .is-visible .journey-line::after { transform: scaleX(1); }
-}
-@media (max-width: 767px) {
- .home-hero { min-height: 0; }
- .hero-photo { object-position: 64% center; }
- .hero-shade { background: linear-gradient(90deg, hsl(153 43% 13% / .95), hsl(153 43% 13% / .62)); }
- .hero-copy { max-width: 34rem; }
- .hero-cta { font-size: 14px; }
-}
-@media (prefers-reduced-motion: reduce) {
- html { scroll-behavior: auto; }
- *, *::before, *::after { animation: none !important; transition: none !important; }
- .motion-ready .reveal:not(.is-visible) { opacity: 1; transform: none; }
- .journey-line::after { transform: none; }
 }
 
 @layer utilities {
