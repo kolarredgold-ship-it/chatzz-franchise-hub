@@ -24,3 +24,6 @@
 ## Franchise research
 - Keep published comparison guides in the local curated content collection with official sources for named competitor facts; this prevents unsupported pricing and availability claims.
 - Give public research routes their own metadata through Helmet, with canonical URLs owned by each route and a sitemap excluding private workspace routes; the static head remains the sitewide social fallback.
+
+## Authentication emails
+- Use the managed email SDK in the scaffolded auth-email-hook; do not add email queues or cron infrastructure because this project uses platform-managed sending.
