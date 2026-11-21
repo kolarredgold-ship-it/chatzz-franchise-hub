@@ -1,51 +1,32 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import OutletShowcase from "@/components/OutletShowcase";
-import DemandSection from "@/components/DemandSection";
-import LocationStrategy from "@/components/LocationStrategy";
-import CompetitiveEdge from "@/components/CompetitiveEdge";
-import ConsumerInsights from "@/components/ConsumerInsights";
 import MenuSection from "@/components/MenuSection";
-import BusinessModels from "@/components/BusinessModels";
-import FranchiseAdvisor from "@/components/FranchiseAdvisor";
-import BrandPresence from "@/components/BrandPresence";
-import PartnerStories from "@/components/PartnerStories";
-import FranchiseProcess from "@/components/FranchiseProcess";
-import PaymentPolicy from "@/components/PaymentPolicy";
-import SecretMasala from "@/components/SecretMasala";
-import WhyChoose from "@/components/WhyChoose";
-import ROISection from "@/components/ROISection";
 import EnquirySection from "@/components/EnquirySection";
 import Footer from "@/components/Footer";
 import { PageHead } from "@/components/PageHead";
+import { FAQ, FinalCTA, Gallery, InvestmentModels, Journey, StickyActions, Stories, Support, useHomepageMotion, WhyStart } from "@/components/HomeSections";
 
-const Index = () => (
-  <div className="min-h-screen">
-    <PageHead title="Bangarpet Chatzz – Franchise & Training" description="Explore Bangarpet Chatzz training, franchise branding, ₹5 lakh kiosk and ₹15 lakh café total investment options. Enquire on WhatsApp." path="/" />
+const Index = () => {
+  useHomepageMotion();
+  return <div className="home-page min-h-screen">
+    <PageHead title="Bangarpet Chatzz – No Royalty Chaat Franchise & Training | Kolar, Karnataka" description="Start with Bangarpet Chatzz: no royalty, ₹5L kiosk, ₹15L café and chaat training in Karnataka. Get franchise details on WhatsApp." path="/" />
     <Header />
     <main>
       <HeroSection />
-      <AboutSection />
-      <OutletShowcase />
-      <BrandPresence />
-      <DemandSection />
-      <LocationStrategy />
-      <CompetitiveEdge />
-      <ConsumerInsights />
+      <WhyStart />
+      <InvestmentModels />
+      <Journey />
+      <Support />
       <MenuSection />
-      <BusinessModels />
-      <FranchiseAdvisor />
-      <FranchiseProcess />
-      <PaymentPolicy />
-      <SecretMasala />
-      <WhyChoose />
-      <ROISection />
-      <PartnerStories />
+      <Gallery />
+      <Stories />
       <EnquirySection />
+      <FAQ />
+      <FinalCTA />
     </main>
     <Footer />
-  </div>
-);
+    <StickyActions />
+  </div>;
+};
 
 export default Index;
