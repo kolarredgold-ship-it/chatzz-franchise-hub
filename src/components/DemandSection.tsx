@@ -1,4 +1,4 @@
-import { Users, Repeat, TrendingUp, ShoppingBag } from "lucide-react";
+import { Users, Repeat, TrendingUp, ShoppingBag, Check } from "lucide-react";
 
 const drivers = [
   { icon: Users, title: "Students & Young Professionals", desc: "Daily snack seekers near colleges and offices" },
@@ -15,46 +15,30 @@ const benefits = [
 ];
 
 const DemandSection = () => (
-  <section className="py-20 md:py-32 bg-card">
-    <div className="container max-w-5xl mx-auto px-4">
-      <div className="text-center mb-16">
-        <span className="eyebrow text-primary">Market Opportunity</span>
-        <h2 className="h-sec mb-4">
-          Urban India: A <span className="text-gradient">High-Demand</span> Chaat Economy
-        </h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
-          From morning college crowds to evening office dispersal and late-night food seekers, chaat is no longer occasional—it's habitual.
-        </p>
-      </div>
-
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
-        {drivers.map((d) => (
-          <div key={d.title} className="p-6 rounded-2xl bg-background border border-border text-center hover:border-primary/40 transition-colors">
-            <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-primary/10 flex items-center justify-center">
-              <d.icon className="h-7 w-7 text-primary" />
-            </div>
-            <h3 className="h-card mb-1">{d.title}</h3>
-            <p className="text-xs text-muted-foreground">{d.desc}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className="bg-background rounded-2xl border border-primary/20 p-8 md:p-10">
-        <div className="flex items-center gap-3 mb-6">
-          <TrendingUp className="h-6 w-6 text-primary" />
-          <h3 className="h-card">Why This Benefits BANGARPET CHATZz</h3>
+  <section className="py-16 md:py-24 bg-card">
+    <div className="container max-w-6xl mx-auto px-4">
+      <span className="eyebrow text-primary">Market Opportunity</span>
+      <div className="grid gap-4 lg:grid-cols-3">
+        <div className="lg:col-span-2 rounded-lg border border-border bg-background p-8">
+          <h2 className="h-sec mb-4">Urban India: A <span className="text-gradient">High-Demand</span> Chaat Economy</h2>
+          <p className="text-muted-foreground">From morning college crowds to evening office dispersal and late-night food seekers, chaat is no longer occasional—it's habitual.</p>
         </div>
-        <div className="grid sm:grid-cols-2 gap-3">
-          {benefits.map((b) => (
-            <div key={b} className="flex items-center gap-3 text-sm">
-              <div className="w-2 h-2 rounded-full bg-primary shrink-0" />
-              <span>{b}</span>
+        <div className="lg:row-span-2 rounded-lg bg-primary text-primary-foreground p-8">
+          <TrendingUp className="h-8 w-8 mb-4" />
+          <h3 className="h-card mb-5">Why This Benefits BANGARPET CHATZz</h3>
+          <ul className="space-y-3">
+            {benefits.map((b) => <li key={b} className="flex gap-3 text-sm"><Check className="h-5 w-5 shrink-0" />{b}</li>)}
+          </ul>
+          <p className="text-sm mt-6 pt-6 border-t border-primary-foreground/30 text-primary-foreground/90">This demand structure ensures steady daily turnover, which is critical for franchise profitability.</p>
+        </div>
+        <div className="lg:col-span-2 grid sm:grid-cols-2 gap-4">
+          {drivers.map((d) => (
+            <div key={d.title} className="flex gap-4 p-5 rounded-lg bg-background border border-border">
+              <d.icon className="h-7 w-7 text-primary shrink-0" />
+              <div><h3 className="h-card mb-1">{d.title}</h3><p className="text-xs text-muted-foreground">{d.desc}</p></div>
             </div>
           ))}
         </div>
-        <p className="text-sm text-muted-foreground mt-6 pt-6 border-t border-border">
-          This demand structure ensures steady daily turnover, which is critical for franchise profitability.
-        </p>
       </div>
     </div>
   </section>
