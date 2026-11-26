@@ -15,6 +15,9 @@
 - Label sample testimonials, portraits and outcomes as fictional at section and item level until verified partner material replaces them, to avoid presenting examples as customer evidence.
 - Use the shared Embla carousel for sliding story content with swipe and accessible manual navigation, avoiding automatic motion.
 
+## Hero slideshow
+- Use the shared Embla carousel and its autoplay plugin for hero slides; pause on hover/focus and disable automatic motion for reduced-motion preferences to preserve accessible navigation.
+
 ## Franchise CRM
 - Store CRM leads, trainers and activities only in the connected Google Sheet; route access through the franchise-crm Edge Function to keep connector credentials server-only.
 - Validate staff identity with getUser and a protected user_roles admin grant on every CRM request; the obscure admin URL is navigation, never authorization.
