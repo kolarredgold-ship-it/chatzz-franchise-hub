@@ -1,6 +1,7 @@
 import { ArrowRight, Check, ChevronDown, Globe, Instagram, Facebook, MapPin, MessageCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/bangarpet-chatzz-logo.png.asset.json";
 import { franchiseGuides, guidesByCategory } from "@/lib/franchise-guides";
 
 const WHATSAPP = "https://wa.me/919738959525?text=" + encodeURIComponent("Hi Bangarpet Chatzz, I would like to know more about your franchise and training options.");
@@ -62,7 +63,9 @@ const Footer = () => (
     <div className="container max-w-6xl mx-auto px-4 py-14">
       <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12">
         <div className="lg:col-span-4">
-          <Link to="/" className="text-2xl font-extrabold text-gradient">Bangarpet Chatzz</Link>
+          <Link to="/" className="inline-block rounded-xl bg-background px-4 py-2">
+            <img src={logo.url} alt="Bangarpet Chatzz" className="h-12 w-auto" />
+          </Link>
           <p className="mt-4 max-w-sm text-sm text-background/70">
             Chaat-led food businesses across Karnataka — mostly Bengaluru, with three outlets in
             Kolar. 200+ people trained so far.

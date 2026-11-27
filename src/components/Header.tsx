@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/bangarpet-chatzz-logo.png.asset.json";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -18,8 +19,8 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border shadow-sm">
       <div className="container flex items-center justify-between h-16">
-        <a href="#" className="text-2xl font-extrabold text-gradient">
-          Bangarpet Chatzz
+        <a href="#" className="flex items-center">
+          <img src={logo.url} alt="Bangarpet Chatzz" className="h-11 w-auto" />
         </a>
 
         <nav className="hidden lg:flex items-center gap-4">
