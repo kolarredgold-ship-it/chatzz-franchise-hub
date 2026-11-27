@@ -10,3 +10,5 @@
 - [x] Add clearly labelled fictional sample partner stories, portraits and outcomes as requested.
 - [x] Link all 100 guide pages in the footer.
 - [x] Redesign the footer with a professional, structured layout.
+- [ ] Replace the site logo with the user's uploaded logo in header, footer and browser tab icon.
+- [ ] Use the user's supplied SEO home page titles: set home page SEO metadata and build SEO pages for those titles.

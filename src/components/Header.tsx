@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/bangarpet-chatzz-logo.png.asset.json";
+import logo from "@/assets/bangarpet-chatzz-logo.webp.asset.json";
 
 const navLinks = [
   { label: "About", href: "#about" },

@@ -1,7 +1,7 @@
 import { ArrowRight, Check, ChevronDown, Globe, Instagram, Facebook, MapPin, MessageCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/bangarpet-chatzz-logo.png.asset.json";
+import logo from "@/assets/bangarpet-chatzz-logo.webp.asset.json";
 import { franchiseGuides, guidesByCategory } from "@/lib/franchise-guides";
 
 const WHATSAPP = "https://wa.me/919738959525?text=" + encodeURIComponent("Hi Bangarpet Chatzz, I would like to know more about your franchise and training options.");
